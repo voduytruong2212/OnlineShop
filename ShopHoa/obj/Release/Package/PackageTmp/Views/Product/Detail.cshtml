@@ -1,0 +1,96 @@
+﻿@model Models.EntityFrameWork.Product
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var category = (Models.EntityFrameWork.ProductCategory)ViewBag.Category;
+    var relatedProducts = (List<Models.EntityFrameWork.Product>) ViewBag.RelatedProducts;
+}
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<link rel="stylesheet" type="text/css" href="/Assets/Client/style.css" />
+<link rel="stylesheet" href="/Assets/Client/lightbox.css" type="text/css" media="screen" />
+<script src="/Assets/Client/js/prototype.js" type="text/javascript"></script>
+<script src="/Assets/Client/js/scriptaculous.js?load=effects" type="text/javascript"></script>
+<script src="/Assets/Client/js/lightbox.js" type="text/javascript"></script>
+<script type="text/javascript" src="/Assets/Client/js/java.js"></script>
+<div class="right_content">
+    <div class="crumb_nav"> <a href="/">Trang chủ</a> &gt;&gt; <a href="/chu-de/@category.MetaTitle-@category.ProductCategoryID">@category.ProductCategoryName </a></div>
+    <div class="title"><span class="title_icon"><img src="/Assets/Client/images/bullet1.gif" alt="" /></span>@Model.Name</div>
+    <div class="feat_prod_box_details">
+        <div class="prod_img">
+            <br />
+            <br />
+            <a href="@Model.Image" rel="lightbox"><img src="@Model.Image" class="thumb1" alt="" border="0" /></a>
+        </div>
+        <div class="prod_det_box">
+            <div class="box_top"></div>
+            <div class="box_center">
+                <div class="prod_title">Ý nghĩa</div>
+                <p class="details">
+                    @Model.Description
+                </p>
+                <div class="price">
+                    <strong>Giá</strong>
+                    @if (Model.PromotionPrice != null)
+                    {
+                        <span class="red">@string.Format("{0:0,0 VNĐ}", Model.PromotionPrice).Replace(",", ".")</span>
+
+                    }
+                    else
+                    {
+                        <span class="red">@string.Format("{0:0,0 VNĐ}", Model.Price).Replace(",", ".")</span>
+                    }
+                </div>       
+                <a href="/them-gio-hang?productId=@Model.ProductID&quantity=1" class="more"><img src="/Assets/Client/images/buy_now.gif" alt="" border="0" /></a>
+                <div class="clear"></div>
+            </div>
+            <div class="box_bottom"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div id="demo" class="demolayout">
+        <ul id="demo-nav" class="demolayout">
+            <li><a class="active" href="#tab1">Chi tiết sản phẩm</a></li>
+            <li><a class="" href="#tab2">Sản phẩm liên quan</a></li>
+        </ul>
+        <div class="tabs-container">
+            <div style="display: block;" class="tab" id="tab1">
+                <pre class="more_details"> @Html.Raw(Model.Detail)</pre>
+
+               
+
+                <p class="more_details"></p>
+            </div>
+            <div style="display: none;" class="tab" id="tab2">
+                @foreach (var item in relatedProducts)
+                {
+                    var url ="/chi-tiet"+"/"+item.MetaTitle + "/" + item.ProductID;
+                    <div class="new_prod_box">
+                        <a href="@url">@item.Name</a>
+                       @if (item.PromotionPrice != null)
+                       {
+                        <span class="red">@string.Format("{0:0,0 VNĐ}", item.PromotionPrice).Replace(",", ".")</span>
+                       }
+                       else
+                       {
+                            <span class="red">@string.Format("{0:0,0 VNĐ}", item.Price).Replace(",", ".")</span>
+                       }
+                        <div class="new_prod_bg"> <a href="@url"><img src="@item.Image" alt="" class="thumb" border="0"/></a>
+                        </div>
+                    </div>
+                }
+               
+
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<script type="text/javascript">
+
+    var tabber1 = new Yetii({
+        id: 'demo'
+    });
+
+</script>
+

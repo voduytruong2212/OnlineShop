@@ -1,0 +1,44 @@
+﻿@model Models.EntityFrameWork.Contact
+@{
+    ViewBag.Title = "Liên hệ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section jsFooter{
+<script src="/Assets/Client/js/controller/contactController.js"></script>
+    }
+<div class="right_content">
+    <div class="title"><span class="title_icon"><img src="/Assets/Client/images/bullet1.gif" alt="" /></span>Liên hệ cho chúng tôi</div>
+    <div class="feat_prod_box_details">
+        <p class="details">@Html.Raw(Model.Content)</p>
+        <div class="contact_form">
+            <div class="form_subtitle">Vui lòng điền đầy đủ thông tin</div>
+            <div class="form_row">
+                <label class="contact"><strong>Họ Tên:</strong></label>
+                <input type="text" id="txtName" class="contact_input" placeholder="Họ Tên" />
+            </div>
+            <div class="form_row">
+                <label class="contact"><strong>Email:</strong></label>
+                <input type="text" id="txtEmail" class="contact_input" placeholder="Địa chỉ mail" />
+            </div>
+            <div class="form_row">
+                <label class="contact"><strong>Điện thoại:</strong></label>
+                <input type="text" id="txtPhone" class="contact_input" placeholder="Số điện thoại" />
+            </div>
+            <div class="form_row">
+                <label class="contact"><strong>Địa chỉ</strong></label>
+                <input type="text" id="txtAddress" class="contact_input" placeholder="Địa chỉ" />
+            </div>
+            <div class="form_row">
+                <label class="contact"><strong>Nội dung:</strong></label>
+                <textarea class="contact_textarea" id="txtMessage" placeholder="Nhập..."></textarea>
+            </div>
+            <div class="form_row">
+                <button id="btnSend" class="btn btn-success">Gửi đi</button>
+            </div>
+            
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+

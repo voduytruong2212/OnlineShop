@@ -1,0 +1,5 @@
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Common\bin\Release\Common.dll
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Common\bin\Release\Common.pdb
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Common\obj\Release\Common.dll
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Common\obj\Release\Common.pdb

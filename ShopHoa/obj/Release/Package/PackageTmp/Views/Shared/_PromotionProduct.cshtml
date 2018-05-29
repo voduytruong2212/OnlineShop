@@ -1,0 +1,19 @@
+﻿@model List<Models.EntityFrameWork.Product>
+@{
+    var listPromotionProducts = (List<Models.EntityFrameWork.Product>) ViewBag.ListPromotionProducts;
+}
+<div class="title">
+    <span class="title_icon"><img src="/Assets/Client/images/bullet4.gif" alt="" /></span>Giảm giá
+</div>
+
+@foreach (var item in listPromotionProducts)
+{
+    var url = "/chi-tiet/" +item.MetaTitle+"/"+item.ProductID;
+    <div class="new_prod_box">
+        <a href="@url">@item.Name</a>
+        <a>@string.Format("{0:0,0 VNĐ}", item.PromotionPrice).Replace(",", ".")</a>
+        <div class="new_prod_bg">
+            <span class="new_icon"><img src="/Assets/Client/images/promo_icon.gif" alt="" /></span> <a href="@url"><img src="@item.Image" alt="" class="thumb" border="0" /></a>
+        </div>
+    </div>
+}

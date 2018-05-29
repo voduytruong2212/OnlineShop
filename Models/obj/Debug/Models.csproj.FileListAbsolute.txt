@@ -1,0 +1,16 @@
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Models\bin\Debug\Models.dll.config
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Models\bin\Debug\Models.dll
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Models\bin\Debug\Models.pdb
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Models\bin\Debug\EntityFramework.dll
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Models\bin\Debug\PagedList.dll
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Models\bin\Debug\PagedList.Mvc.dll
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Models\bin\Debug\EntityFramework.xml
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Models\bin\Debug\PagedList.xml
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Models\bin\Debug\PagedList.Mvc.xml
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Models\obj\Debug\Models.dll
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Models\obj\Debug\Models.pdb
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Models\bin\Debug\Common.dll
+C:\Users\Kennytungnk\documents\visual studio 2017\Projects\ShopHoa\Models\bin\Debug\Common.pdb

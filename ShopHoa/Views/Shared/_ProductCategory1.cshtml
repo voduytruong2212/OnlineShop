@@ -1,0 +1,10 @@
+﻿@model List<Models.EntityFrameWork.ProductCategory>
+<div class="title"><span class="title_icon"><img src="/Assets/Client/images/bullet6.gif" alt="" /></span>Danh mục hoa tươi</div>
+<ul class="list">
+    @foreach (var item1 in Model)
+    {
+        <li><a href="/hoa-tuoi/@item1.MetaTitle-@item1.ProductCategoryID">@item1.ProductCategoryName</a></li>
+    }
+
+
+</ul>

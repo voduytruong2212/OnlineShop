@@ -1,0 +1,46 @@
+﻿
+<div class="right_content">
+    <div class="languages_box">
+        <span class="red">Languages:</span> <a href="http://all-free-download.com/free-website-templates/" class="selected"><img src="/Assets/Client/images/gb.gif" alt="" border="0" /></a> <a href="http://all-free-download.com/free-website-templates/"><img src="/Assets/Client/images/fr.gif" alt="" border="0" /></a> <a href="http://all-free-download.com/free-website-templates/"><img src="/Assets/Client/images/de.gif" alt="" border="0" /></a>
+    </div>
+    <div class="currency">
+        <span class="red">Currency: </span> <a href="http://all-free-download.com/free-website-templates/">GBP</a> <a href="http://all-free-download.com/free-website-templates/">EUR</a> <a href="http://all-free-download.com/free-website-templates/" class="selected">USD</a>
+    </div>
+    <div class="cart">
+        <div class="title">
+            <span class="title_icon"><img src="/Assets/Client/images/cart.gif" alt="" /></span>My cart
+        </div>
+        <div class="home_cart_content">
+            3 x items | <span class="red">TOTAL: 100$</span>
+        </div>
+        <a href="cart.html" class="view_cart">view cart</a>
+    </div>
+    <div class="right_box">
+        <div class="title">
+            <span class="title_icon"><img src="/Assets/Client/images/bullet4.gif" alt="" /></span>Giảm giá
+        </div>
+
+        <div class="new_prod_box">
+            <a href="http://all-free-download.com/free-website-templates/">product name</a>
+            <div class="new_prod_bg">
+                <span class="new_icon"><img src="/Assets/Client/images/promo_icon.gif" alt="" /></span> <a href="http://all-free-download.com/free-website-templates/"><img src="/Assets/Client/images/thumb1.gif" alt="" class="thumb" border="0" /></a>
+            </div>
+        </div>
+        <div class="new_prod_box">
+            <a href="http://all-free-download.com/free-website-templates/">product name</a>
+            <div class="new_prod_bg">
+                <span class="new_icon"><img src="/Assets/Client/images/promo_icon.gif" alt="" /></span> <a href="http://all-free-download.com/free-website-templates/"><img src="/Assets/Client/images/thumb2.gif" alt="" class="thumb" border="0" /></a>
+            </div>
+        </div>
+        <div class="new_prod_box">
+            <a href="http://all-free-download.com/free-website-templates/">product name</a>
+            <div class="new_prod_bg">
+                <span class="new_icon"><img src="/Assets/Client/images/promo_icon.gif" alt="" /></span> <a href="http://all-free-download.com/free-website-templates/"><img src="/Assets/Client/images/thumb3.gif" alt="" class="thumb" border="0" /></a>
+            </div>
+        </div>
+    </div>
+    <div class="right_box">
+        @{Html.RenderAction("_ProductCategory", "Product");}
+        @{Html.RenderAction("_ProductCategory1", "Product");}
+    </div>
+</div>

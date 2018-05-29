@@ -1,0 +1,33 @@
+﻿@model List<Models.EntityFrameWork.Product>
+@{
+    ViewBag.Title = "Kết quả tìm kiếm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<div class="crumb_nav"> <a href="/">Trang chủ</a></div>
+<div class="title"><span class="title_icon"><img src="/Assets/Client/images/bullet1.gif" alt="" /></span>Kết quả tìm kiếm theo từ khóa: @ViewBag.Keyword</div>
+<div class="new_products">
+    @foreach (var item in Model)
+    {
+        var url = "/chi-tiet/" + item.MetaTitle + "/" + item.ProductID;
+        <div class="new_prod_box">
+            <a href="@url">@item.Name</a>
+            @if (item.PromotionPrice != null)
+            {
+                <span class="red">@string.Format("{0:0,0 VNĐ}", item.PromotionPrice).Replace(",", ".")</span>
+
+            }
+            else
+            {
+                <span class="red">@string.Format("{0:0,0 VNĐ}", item.Price).Replace(",", ".")</span>
+            }
+            <div class="new_prod_bg"> <a href="@url"><img src="@item.Image" alt="" class="thumb" border="0" /></a> </div>
+        </div>
+    }
+
+
+
+</div>
+<div class="clear"></div>
+

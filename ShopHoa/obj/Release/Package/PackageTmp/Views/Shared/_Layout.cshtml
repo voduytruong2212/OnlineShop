@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Flower Shop</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" type="text/css" href="/Assets/Client/style.css" /> 
+    <link href="/Assets/Client/bootstrap.css" rel="stylesheet" />
+    <link href="/Assets/Client/jquery-ui.css" rel="stylesheet" />
+    <script src="/Assets/Client/js/jquery-3.3.1.min.js"></script>
+    <script src="/Assets/Client/js/jquery-ui.js"></script>
+    <script src="/Assets/Client/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="header">
+            <div class="headertop_desc">
+                @{ Html.RenderAction("_TopMenu", "Home");}
+            </div>
+            <div class="logo">
+                <a href="/Home/Index"><img src="/Assets/Client/images/logo.gif" alt="" border="0" /></a>
+            </div>
+            <div id="menu">
+                @{ Html.RenderAction("_MainMenu", "Home"); }
+                <div class="search_box">
+                    <form action="/tim-kiem" method="get">
+                        <input type="text" id="txtKeyword" name="keyword" placeholder="Gõ từ khóa" /><input type="submit" value="" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="center_content">
+            <div class="left_content">
+                @{ Html.RenderAction("_HeaderCart", "Home");}
+                <div class="right_box">
+                    @{Html.RenderAction("_ProductCategory", "Product");}
+                    @{Html.RenderAction("_ProductCategory1", "Product");}
+                </div>
+                <div class="right_box">
+                    @{Html.RenderAction("_PromotionProduct", "Product");}
+                </div>
+            </div>
+            <!--end of left content-->
+            <div class="right_content">
+                @RenderBody()
+            </div>
+            <!--end of right content-->
+            <div class="clear"></div>
+        </div>
+        <!--end of center content-->
+        @{ Html.RenderAction("_Footer", "Home"); }
+    </div>
+    <script src="/Assets/Client/js/controller/baseController.js"></script>
+    @RenderSection("jsFooter", required: false)
+</body>
+</html>
